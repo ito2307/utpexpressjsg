@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Estudiante
+  br
+  br
+  form(method='post', action='/estudiante/crear')
+    .form-group
+      label(for='nombre') Nombre
+      input.form-control(type='text', name='nombre', placeholder='Nombre')
+    .form-group
+      label(for='apellido') Apellido
+      input.form-control(type='text', name='apellido', placeholder='Apellido')
+    .form-group
+      label(for='cedula') Cédula
+      input.form-control(type='text', name='cedula', placeholder='Cédula')
+    .form-group
+      label(for='descripción') Descripción
+      input.form-control(type='text', name='descripcion', placeholder='Descripción')
+    .form-group
+      label(for='Activo') Activo
+      input.form-control(type='checkbox', name='activo', placeholder='Activo')
+    button.btn.btn-default(type='submit') Guardar

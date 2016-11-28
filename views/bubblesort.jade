@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	form
+		input#numero(type='text',required)
+		input(type='submit', onclick="bubblesort()", value='Enviar')
+	script.
+		function bubblesort(){
+		var value = document.getElementById('numero').value;
+		var a = value.split(',').map(Number);
+		var n = a.filter(function(elem,pos){
+		return a.indexOf(elem) ==pos;
+		});
+		var i;
+		var temp;
+			for (var i=0; i < a.length; i++)
+			{
+			 for(var j=i+1; j<a.length;j++)
+			 	{
+					if (a[j]<a[i])
+					{
+						temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+					}
+				}
+			}
+			alert(a);
+		}
+
+
+
+
+
+1,10,2,22
+//- 	- ‘/bubblesort’: Ruta del “Primer problema”, debe contener: (30 puntos)
+//- - Un formulario​ que reciba desde un input ​un arreglo de números dividido
+//- por comas
+//- - Ejemplo: “1, 4, 2, 5, 2, 10”.
+//- - Un botón de submit ​que al ser presionado deberá mostrar el arreglo
+//- introducido desde el input, ​ordenado de menor a mayor y sin elementos
+//- repetidos. La técnica de ordenamiento a utilizar deberá ser
+//- “ordenamiento de burbuja”.
+//- - Ejemplo: “1, 2, 4, 5, 10”. (Usando como entrada el ejemplo
+//- anterior)
+//- - El método para el despliegue del resultado queda a creatividad del
+//- estudiante. (Ejemplos: console.log(), alert(), una tabla… etc).
+//- - El input ​solo debe permitir entrada de números.

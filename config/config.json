@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "secret",
+    "database": "utp",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "express",
+    "password": "password",
+    "database": "utp",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "express",
+    "password": "password",
+    "database": "utp",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

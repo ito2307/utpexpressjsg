@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	form
+		input#numero(type='number', min="0",required)
+		input(type='submit', onclick='factor()', value='Enviar')
+	script.
+		function factor(){ 
+		var acum=1;
+		var i;
+		var num=document.getElementById("numero").value;
+		if(num==0)
+			{
+			alert('Tiene que ser un numero');
+			}else{
+			for(i = 1; i <= num; i++)
+			{
+			acum*=i;
+			}
+			alert(acum);
+			}
+		
+			
+		}
+//- 			‘/factorial’: Ruta del “Segundo problema”, debe contener: (30 puntos)
+//- - Un formulario que reciba desde un input un número.
+//- - Ejemplo: “5”
+//- - Un botón de submit​ que al ser presionado deberá mostrar el factorial del
+//- número introducido desde el input​.
+//- - Ejemplo: “125”. (Usando como entrada el ejemplo anterior)
+//- - El método para el despliegue del resultado queda a creatividad del
+//- estudiante. (Ejemplos: console.log(), alert(), una tabla… etc).
+//- - El input ​solo debe permitir entrada de números.
