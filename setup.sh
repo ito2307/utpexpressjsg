@@ -5,7 +5,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install git
 
 # Instalando nodejs
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Instalando paquetes esenciales para compilar ciertos paquetes NPM
@@ -13,7 +13,8 @@ sudo apt-get install -y build-essential
 
 # Instalando express-generator
 sudo npm install express-generator bower -g
-
+# instalando bower
+sudo npm install -g bower
 # Instalando postgreqsl
 sudo apt-get install postgresql postgresql-contrib -y
 
