@@ -39,19 +39,6 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use('/', routes);
 app.use('/estudiante', estudiante);
 
-
-
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(flash());
-app.use(express.session({ secret: 'so secret' }));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(app.router);
-
-
-
-
 // Handle 404
   app.use(function(req, res) {
       res.status(400);
