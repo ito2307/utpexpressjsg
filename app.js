@@ -10,9 +10,8 @@ var engine = require('ejs-mate');
 var routes = require('./routes/index');
 var estudiante = require('./routes/estudiante');
 
-//authentication
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var passport = require("passport");
+LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
 
@@ -41,6 +40,14 @@ app.use('/', routes);
 app.use('/estudiante', estudiante);
 
 
+
+app.use(express.cookieParser());
+app.use(express.bodyParser());
+app.use(flash());
+app.use(express.session({ secret: 'so secret' }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(app.router);
 
 
 

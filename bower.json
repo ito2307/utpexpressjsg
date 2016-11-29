@@ -1,10 +1,7 @@
 {
-  "name": "utp",
+  "name": "utpexpressjs",
   "description": "",
-  "main": "app.js",
-  "authors": [
-    "Eduardo Herrera <ito2307@gmail.com>"
-  ],
+  "main": "",
   "license": "MIT",
   "homepage": "",
   "ignore": [
@@ -13,8 +10,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "bootstrap": "^3.3.7"
-  }
+  ]
 }
